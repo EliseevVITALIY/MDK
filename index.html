@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/style.css">
+    <title>Обо мне</title>
+</head>
+<body>
+    <header>
+        <section id="section0"></section>
+        <h1 >Обо <p style="margin: 0;"></p>мне</h1>
+        <nav>
+            <ul>
+                <table>
+                    <tbody>
+                <tr>
+                    <td>
+                <button id="hh">Обо мне</button>
+                </td>
+                <p style="margin: 0;"></p>
+                <td><button onclick="location.href='public/documents.html'" id="h">Нормативные документы</button>
+                </td>
+                </tr>
+                <td>
+                <p style="margin: 0;"><button onclick="location.href='public/works.html'" id="h">Практические работы</button></p>
+            </td>
+            <td>
+                <p style="margin: 0;"><button onclick="location.href='public/PP.html'" id="h">Дневник по практике</button></p>
+            </td>
+            <td>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+            </ul>
+        </nav>
+    </header>
+    <main> 
+
+        <h2>
+        Елисеев Виталий, студент 44 группы. Специальность 09.02.05 "Прикладная информатика (по отраслям)"
+        <p></p>
+        <div class="container">
+            <img id="personImage" src="public/Я.png" alt="Person" width="300">
+            <div class="nose-area" onclick="playMedia()"></div>
+            <div class="video-container" id="videoContainer" style="display: none;">
+                <video id="personVideo" loop autoplay muted>
+                    <source src="public/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <audio id="personAudio" style="display: none;">
+                    <source src="sound.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        
+       </h2>
+        
+       <script>
+        function playMedia() {
+            var image = document.getElementById("personImage");
+            var videoContainer = document.getElementById("videoContainer");
+            var video = document.getElementById("personVideo");
+            var audio = document.getElementById("personAudio");
+            audio.load();
+    
+           
+            videoContainer.style.display = "block";
+    
+            // Рандомизация действия
+            if (Math.random() < 0.8) {
+                video.style.display = "none";
+                audio.style.display = "block";
+                audio.play().catch(error => console.log('Не удалось воспроизвести аудио:', error));
+            } else {
+               video.style.display = "block";
+                audio.style.display = "none";
+                image.style.display = "none";
+                video.play();
+            }
+        }
+    </script>
+    </main>
+    <footer>
+        <p>© 2024 Виталий Елисеев</p>
+    </footer>
+</body>
+</html>
