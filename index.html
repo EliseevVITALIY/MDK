@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="files/style.css">
     <title>Обо мне</title>
 </head>
 <body>
@@ -16,21 +16,22 @@
                     <tbody>
                 <tr>
                     <td>
-                <button id="hh">Обо мне</button>
-                </td>
+                        <button id="hh">Обо мне</button>
+                        <p style="margin: 0;"><button onclick="location.href='files/works.html'" id="h">Практические работы</button></p>
+                        
+                    </td>
                 <p style="margin: 0;"></p>
-                <td><button onclick="location.href='public/documents.html'" id="h">Нормативные документы</button>
-                </td>
-                </tr>
-                <td>
-                <p style="margin: 0;"><button onclick="location.href='public/works.html'" id="h">Практические работы</button></p>
-            </td>
-            <td>
-                <p style="margin: 0;"><button onclick="location.href='public/PP.html'" id="h">Дневник по практике</button></p>
-            </td>
-            <td>
-                </td>
-                </tr>
+                    <td>
+                        <button onclick="location.href='files/documents.html'" id="h">Нормативные документы</button>
+                        <p style="margin: 0;"><button style="color: rgba(250, 235, 215, 0); background-color: rgba(240, 248, 255, 0); box-shadow: none;" onclick="location.href='https://www.youtube.com/watch?v=hN6P7sllpp8'" id="h">Нормативные документы</button></p>
+                        
+                        
+                       
+                    </td>
+                    <td>
+                        <p style="margin: 0;"><button onclick="location.href='files/'" id="h">Производственная практика</button></p>
+                        <p style="margin: 0;"><button onclick="location.href='files/'" id="h">Учебная практика</button></p>
+                    </td> 
                 </tbody>
                 </table>
             </ul>
@@ -42,11 +43,11 @@
         Елисеев Виталий, студент 44 группы. Специальность 09.02.05 "Прикладная информатика (по отраслям)"
         <p></p>
         <div class="container">
-            <img id="personImage" src="public/Я.png" alt="Person" width="300">
+            <img id="personImage" src="files/Я.png" alt="Person" width="300">
             <div class="nose-area" onclick="playMedia()"></div>
             <div class="video-container" id="videoContainer" style="display: none;">
                 <video id="personVideo" loop autoplay muted>
-                    <source src="public/video.mp4" type="video/mp4">
+                    <source src="files/video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <audio id="personAudio" style="display: none;">
